@@ -1613,6 +1613,8 @@
     window.scrollTo(0, 0);
     document.addEventListener('DOMContentLoaded', function () { window.scrollTo(0, 0); });
   </script>
+  <link rel="preload" as="image" href="opt/boho/20230703LBAL43989.JPG">
+  <link rel="preload" as="image" href="opt/boho/20230703LBAL43990.JPG">
 </head>
 <body>
 
@@ -1797,7 +1799,7 @@
         <p class="sec-desc">Ei… sustok akimirkai. Įkvėpk. Čia niekas niekur neskuba.<br><br>Saulė leidžiasi lėtai, muzika sklinda ore, o žmonės šypsosi be priežasties. Čia nereikia vaidmenų – tik būti. Basos kojos, lengvi audiniai ir juokas, kuris sklinda toliau nei garsas.</p>
       </div>
     </div>
-    <div class="circ-gallery fu d2" id="boho-circular"></div>
+    <div class="circ-gallery" id="boho-circular"></div>
   </section>
 
   <div class="divider"></div>
@@ -2616,10 +2618,10 @@
       if (!container) return;
 
       var PHOTOS = [
-        '20230703LBAL43989.JPG', '20230703LBAL43990.JPG',
-        '20230703LBAL44032.JPG', '20230703LBAL44038.JPG',
-        '20230703LBAL44225.JPG', '20230703LBAL44297.JPG',
-        '20230703LBAL43976.JPG',
+        'opt/boho/20230703LBAL43989.JPG', 'opt/boho/20230703LBAL43990.JPG',
+        'opt/boho/20230703LBAL44032.JPG', 'opt/boho/20230703LBAL44038.JPG',
+        'opt/boho/20230703LBAL44225.JPG', 'opt/boho/20230703LBAL44297.JPG',
+        'opt/boho/20230703LBAL43976.JPG',
       ];
       var N = PHOTOS.length;
       var RADIUS = 490;
@@ -2637,7 +2639,7 @@
         card.className = 'circ-card';
         card.style.transform = 'rotateY(' + angle + 'deg) translateZ(' + RADIUS + 'px)';
         card.innerHTML =
-          '<img src="' + src + '" alt="Boho Festival" loading="lazy">' +
+          '<img src="' + src + '" alt="Boho Festival" ' + (i < 2 ? '' : 'loading="lazy"') + '>' +
           '<div class="circ-card-ov"></div>';
         stage.appendChild(card);
         return { el: card, angle: angle };
