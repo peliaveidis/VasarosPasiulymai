@@ -2004,7 +2004,7 @@
   <section id="africa-fest" class="section af-section">
 
     <!-- Autoplay looping background video — blurred, no controls -->
-    <video class="af-bg-vid" autoplay muted loop playsinline>
+    <video class="af-bg-vid" autoplay muted loop playsinline preload="auto" id="africa-bg-vid">
       <source src="africa-bg.mp4" type="video/mp4">
     </video>
 
@@ -3165,6 +3165,20 @@ void main(){
       ioD.observe(canvas.parentElement);
 
       window.addEventListener('resize', resize, { passive: true });
+    })();
+
+    /* Africa Fest background video — restart on section enter to fix stall */
+    (function () {
+      var vid = document.getElementById('africa-bg-vid');
+      if (!vid) return;
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            if (vid.paused) vid.play().catch(function(){});
+          }
+        });
+      }, { threshold: 0.1 });
+      io.observe(document.getElementById('africa-fest'));
     })();
   </script>
 </body>
