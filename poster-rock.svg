@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 960" width="540" height="960">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0.3" y2="1">
+      <stop offset="0%" stop-color="#0d0202"/>
+      <stop offset="50%" stop-color="#2a0606"/>
+      <stop offset="100%" stop-color="#080202"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="44%" r="50%">
+      <stop offset="0%" stop-color="#cc1a1a" stop-opacity="0.42"/>
+      <stop offset="100%" stop-color="#cc1a1a" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="20"/></filter>
+  </defs>
+  <rect width="540" height="960" fill="url(#g)"/>
+  <ellipse cx="270" cy="420" rx="240" ry="195" fill="url(#glow)" filter="url(#blur)"/>
+  <!-- lightning bolt / stage light shapes -->
+  <polygon points="290,180 240,400 275,400 225,620 310,350 270,350 320,180" fill="#cc1a1a" opacity="0.22"/>
+  <!-- horizontal scan lines -->
+  <rect x="0" y="310" width="540" height="1" fill="#cc1a1a" opacity="0.12"/>
+  <rect x="0" y="420" width="540" height="1" fill="#cc1a1a" opacity="0.10"/>
+  <rect x="0" y="530" width="540" height="1" fill="#cc1a1a" opacity="0.08"/>
+  <!-- star/spark accents -->
+  <circle cx="130" cy="280" r="2.5" fill="#ff6666" opacity="0.55"/>
+  <circle cx="410" cy="250" r="2"   fill="#ff4444" opacity="0.50"/>
+  <circle cx="470" cy="480" r="1.5" fill="#ff6666" opacity="0.40"/>
+  <circle cx="80"  cy="520" r="2"   fill="#ff4444" opacity="0.45"/>
+  <!-- guitar string lines -->
+  <line x1="0" y1="600" x2="540" y2="580" stroke="#cc1a1a" stroke-width="0.7" opacity="0.14"/>
+  <line x1="0" y1="620" x2="540" y2="600" stroke="#cc1a1a" stroke-width="0.5" opacity="0.10"/>
+  <!-- brand -->
+  <text x="270" y="830" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="11" font-weight="600" letter-spacing="4" fill="rgba(255,255,255,0.35)">DAINORA EVENTS</text>
+  <text x="270" y="872" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="34" font-weight="900" letter-spacing="-1" fill="white" opacity="0.92">ROCK OF AGES</text>
+</svg>

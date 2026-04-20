@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(screencapture --help)",
+      "Bash(python3 -c ' *)",
+      "Bash(avconvert --help)"
+    ]
+  }
+}
